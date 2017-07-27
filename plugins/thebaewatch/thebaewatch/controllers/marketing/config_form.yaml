@@ -1,0 +1,10 @@
+name: Marketing
+form: $/thebaewatch/thebaewatch/models/marketing/fields.yaml
+modelClass: Thebaewatch\Thebaewatch\Models\Marketing
+defaultRedirect: thebaewatch/thebaewatch/marketing
+create:
+    redirect: 'thebaewatch/thebaewatch/marketing/update/:id'
+    redirectClose: thebaewatch/thebaewatch/marketing
+update:
+    redirect: thebaewatch/thebaewatch/marketing
+    redirectClose: thebaewatch/thebaewatch/marketing

@@ -1,0 +1,92 @@
+==
+
+{% set modelData = modelsList.records %}
+{% set displayColumn = modelsList.displayColumn %}
+{% set noRecordsMessage = modelsList.noRecordsMessage %}
+{% set detailsPage = modelsList.detailsPage %}
+{% set detailsKeyColumn = modelsList.detailsKeyColumn %}
+{% set detailsUrlParameter = modelsList.detailsUrlParameter %}
+
+<ul class="record-list">
+   
+</ul>
+
+
+
+
+
+
+
+<!-- Begin intro section (Slider) -->
+            <section id="section-intro" class="intro-slider no-padding">
+
+                <div class="owl-carousel intro-carousel" data-items="1" data-loop="true" data-autoplay="true" data-autoplay-timeout="8000" data-autoplay-hover-pause="true" data-autoplay-speed="600" data-dots="true" data-dots-speed="600" data-nav="true" data-nav-speed="600" data-animate-in="fadeIn" data-animate-out="fadeOut">
+
+
+                     {% set myArr = 'id' %}
+                     {% for model in modelData %}
+                     {% if model.public==1 and myArr in model.categories|keys %}
+
+
+                        <div class="slide-wrapper intro-slide-1 full-height bg-image">
+
+                            <div class="cover"></div>
+
+                            <div class="slide-image full-cover bg-image" style="background-image: url({{model.gallery[0].path}});"></div>
+                            
+                            <div class="intro-caption text-white">
+                                <h1><span class="bg-main text-white">{{model.categories[0].title}}</span><br>
+                                    @{{model.instagram}}
+                                </h1>
+                                <p>{{model.description}}</p>
+                            </div>
+                        </div>
+
+
+                    {% endif %}
+                    {% endfor %}
+                    
+                    
+
+                </div>
+                <!-- End content carousel -->
+
+                <!-- Scroll down arrow -->
+                <a class="scroll-down-arrow page-scroll text-center" href="#section-1"><span class="text-white"><i class="fa fa-arrow-down"></i></span></a>
+
+            </section>
+            <!-- End intro section (Slider) -->
+
+
+            <!-- Section 1 -->
+            <section id="section-1" class="welcome bg-dark text-white">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-left col-md-6">
+                            <div class="col-inner">
+
+                                <!-- Begin Heading -->
+                                <div class="heading heading-xlg">
+                                    <h1><span class="bg-white text-dark">The BAE</span><span class="bg-white text-dark">Watch</span></h1>
+                                </div>
+                                <!-- End Heading -->
+
+                                <p class="lead">{{this.theme.slogan}}</p>
+                            </div> <!-- /.col-inner -->
+                        </div> <!-- /.col -->
+
+                        <div class="col-right col-md-6">
+                            <div class="col-inner">
+
+                                <p class="lead">
+                                    {{this.theme.mission}}
+                                    <p class="lead"><a class="btn btn-danger btn-rounded btn-lg" href="/register">Join Today</a></p>
+                                </p>
+
+                            </div>
+                        </div> <!-- /.col -->
+
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </section>

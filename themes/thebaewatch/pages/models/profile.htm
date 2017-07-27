@@ -1,0 +1,23 @@
+title = "Profile"
+url = "/model/:slug"
+layout = ""
+is_hidden = 0
+
+[builderDetails modelDetails]
+modelClass = "Thebaewatch\Thebaewatch\Models\Models"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "instagram"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+
+==
+{% partial 'models/header' %}
+
+
+
+    {% partial "models/profile-gallery" %}
+
+
+
+
+{% partial 'template/footer' %}

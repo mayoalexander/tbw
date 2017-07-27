@@ -1,0 +1,35 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        oc.commentPosition: ''
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    subtitle:
+        label: Subtitle
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    photo:
+        label: Photo
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    description:
+        label: Description
+        size: huge
+        oc.commentPosition: ''
+        span: auto
+        type: textarea

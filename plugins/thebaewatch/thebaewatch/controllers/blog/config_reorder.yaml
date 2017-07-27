@@ -1,0 +1,4 @@
+title: Blog
+modelClass: Thebaewatch\Thebaewatch\Models\Blog
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,54 @@
+==
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="http://freelabel.net/test/hero-slider/css/style.css"> <!-- Resource style -->
+	<script src="http://freelabel.net/test/hero-slider/js/modernizr.js"></script> <!-- Modernizr -->
+	
+	<section class="cd-hero">
+		<div class="cd-hero-slider autoplay">
+		    {% for record in records %}
+		    	{% if inc==0 %}
+					{% set class = 'selected' %}
+				{% else %}
+					{% set class = '' %}
+				{% endif %}
+				{% set inc = inc+1 %}
+
+
+					<li class="{{class}}" style="background-image:url({{record.gallery[0].path}}) !important;list-style-type:none;padding:0;">
+						<div class="cd-full-width">
+							<h2>{{record.title}}</h2>
+							{% if record.excerpt %}
+								<p>{{record.excerpt}}</p>
+							{% endif %}
+							
+							<a href="/view/mag/{{record.slug}}" class="cd-btn">View</a>
+							<!-- <a href="/view/services" class="cd-btn secondary">Learn More</a> -->
+						</div> <!-- .cd-full-width -->
+					</li>
+		    {% else %}
+		        <li class="no-data">{{ noRecordsMessage }}</li>
+		    {% endfor %}
+
+
+
+		</div> <!-- .cd-hero-slider -->
+
+		<div class="cd-slider-nav">
+			<nav>
+				<span class="cd-marker item-1"></span>
+				
+				<ul>
+					<li class="selected"><a href="#0">Home</a></li>
+					<li><a href="#">Radio</a></li>
+					<li><a href="#">Community</a></li>
+					<li><a href="#">TV</a></li>
+					<li><a href="#">Mag</a></li>
+				</ul>
+			</nav> 
+		</div> <!-- .cd-slider-nav -->
+	</section> <!-- .cd-hero -->
+
+	
+<script src="http://freelabel.net/test/hero-slider/js/jquery-2.1.1.js"></script>
+<script src="http://freelabel.net/test/hero-slider/js/main.js"></script> <!-- Resource jQuery -->

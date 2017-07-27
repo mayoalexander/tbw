@@ -1,0 +1,10 @@
+name: Roles
+form: $/thebaewatch/thebaewatch/models/roles/fields.yaml
+modelClass: Thebaewatch\Thebaewatch\Models\Roles
+defaultRedirect: thebaewatch/thebaewatch/roles
+create:
+    redirect: 'thebaewatch/thebaewatch/roles/update/:id'
+    redirectClose: thebaewatch/thebaewatch/roles
+update:
+    redirect: thebaewatch/thebaewatch/roles
+    redirectClose: thebaewatch/thebaewatch/roles

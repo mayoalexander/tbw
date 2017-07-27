@@ -1,0 +1,119 @@
+title = "Show"
+url = "/show/:slug"
+layout = "baewatch-main"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Thebaewatch\Thebaewatch\Models\Tv"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+
+<!-- Section 5 -->
+<section id="section-5" class="video-demonstration split-box no-padding">
+    <div class="container-fluid">
+        <div class="row">
+        
+
+            
+                <div class="row-same-height"> 
+
+                    <div class="col-left col-lg-6 col-lg-height no-padding">
+                        <div class="col-inner no-padding">
+                            {% set vidInc = 0 %}
+                            {% for episode in record.episodes %}
+                                {% if vidInc==0 %}
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe data-src="https://www.youtube.com/embed/{{episode.media_id |replace({'https://youtu.be/': ''}) }}?modestbranding=1&showinfo=0&playsinline=1&autoplay=1" width="500" height="281" allowfullscreen></iframe>
+                                </div>
+                                {% else %}
+                                    <!-- DO NOTHING -->
+                                {%endif %}
+                                {% set vidInc = vidInc+1 %}
+                            {% endfor %}
+                                
+                            
+                            <!-- End embed video -->
+
+                        </div> <!-- /.col-inner -->
+                    </div> <!-- /.col -->
+
+                    <div class="col-right col-lg-6 col-lg-height col-middle no-padding bg-light-gray">
+                        <div class="col-inner">
+
+                            <!-- Begin Heading -->
+                            <div class="heading heading-xlg">
+                                <h1><span class="bg-main text-white">TV</span>{{record.title}}</h1>
+                            </div>
+                            <!-- End Heading -->
+                        
+                        
+
+                            <p class="lead">
+                                {{record.description}}
+                            </p>
+                            <p>
+                                <a href="/show/{{video.slug}}" class="btn btn-inverse btn-rounded btn-lg"><i class="fa fa-plus"></i> Subscribe</a>
+                            </p>
+
+                        </div> <!-- /.col-inner -->
+                    </div> <!-- /.col -->
+
+                </div>
+                    
+
+
+        </div> <!-- /.row -->
+    </div> <!-- /.container -->
+</section>
+
+<section id="section-5" class="video-demonstration split-box no-padding">
+    <div class="container-fluid">
+
+
+        <!-- Related Projects Row -->
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h3 class="page-header">Episodes</h3>
+            </div>
+            {% for episode in record.episodes %}
+                <div class="col-sm-3 col-xs-6 episode-item" data-media-id="{{episode.media_id |replace({'https://youtu.be/': ''}) }}">
+                
+                    <a href="#">
+                        <img class="img-responsive portfolio-item" src="https://i.ytimg.com/vi/{{episode.media_id |replace({'https://youtu.be/': ''}) }}/hqdefault.jpg" alt="">
+                    </a>
+                    <h4>{{episode.title}}</h4>
+                </div>            
+            {% endfor %}
+    
+        </div>
+        <!-- /.row -->
+
+    </div> <!-- /.container -->
+</section>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="episodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index: 10000;">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="display: block;padding-top:0;">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{episode.media_id |replace({'https://youtu.be/': ''}) }}?modestbranding=1&showinfo=0&playsinline=1&autoplay=1" ></iframe>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

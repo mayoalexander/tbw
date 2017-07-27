@@ -1,0 +1,11 @@
+list: $/thebaewatch/thebaewatch/models/models/columns.yaml
+modelClass: Thebaewatch\Thebaewatch\Models\Models
+title: Models
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'thebaewatch/thebaewatch/models/update/:id'

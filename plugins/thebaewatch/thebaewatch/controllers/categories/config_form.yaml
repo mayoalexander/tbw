@@ -1,0 +1,10 @@
+name: Categories
+form: $/thebaewatch/thebaewatch/models/categories/fields.yaml
+modelClass: Thebaewatch\Thebaewatch\Models\Categories
+defaultRedirect: thebaewatch/thebaewatch/categories
+create:
+    redirect: 'thebaewatch/thebaewatch/categories/update/:id'
+    redirectClose: thebaewatch/thebaewatch/categories
+update:
+    redirect: thebaewatch/thebaewatch/categories
+    redirectClose: thebaewatch/thebaewatch/categories

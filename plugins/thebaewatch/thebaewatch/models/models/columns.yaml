@@ -1,0 +1,32 @@
+columns:
+    id:
+        label: ID
+        type: text
+        searchable: true
+        sortable: true
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    twitter:
+        label: Twitter
+        type: text
+        searchable: true
+        sortable: true
+    gallery:
+        label: Gallery
+        type: text
+        searchable: true
+        invisible: true
+    instagram:
+        label: Instagram
+        type: text
+    slug:
+        label: Slug
+        type: text
+        searchable: true
+        sortable: true
+    public:
+        label: Public
+        type: switch

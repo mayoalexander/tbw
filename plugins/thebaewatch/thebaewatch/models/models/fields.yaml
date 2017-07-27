@@ -1,0 +1,81 @@
+fields:
+    public:
+        label: Public
+        span: full
+        default: 1
+        type: switch
+    instagram:
+        label: Instagram
+        oc.commentPosition: ''
+        span: auto
+        type: text
+        tab: Social
+    slug:
+        label: Slug
+        oc.commentPosition: ''
+        span: auto
+        preset:
+            field: instagram
+            type: slug
+        type: text
+    name:
+        label: Name
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    description:
+        label: Description
+        size: giant
+        oc.commentPosition: ''
+        span: auto
+        type: textarea
+    categories:
+        label: Categories
+        oc.commentPosition: ''
+        nameFrom: title
+        descriptionFrom: Subtitle
+        span: auto
+        type: relation
+    roles:
+        label: Roles
+        oc.commentPosition: ''
+        nameFrom: title
+        descriptionFrom: description
+        span: right
+        type: relation
+tabs:
+    fields:
+        twitter:
+            label: Twitter
+            oc.commentPosition: ''
+            span: auto
+            type: text
+            tab: Social
+        snapchat:
+            label: Snapchat
+            oc.commentPosition: ''
+            span: auto
+            type: text
+            tab: Social
+        youtube:
+            label: Youtube
+            oc.commentPosition: ''
+            span: auto
+            type: text
+            tab: Social
+        gallery:
+            label: Gallery
+            oc.commentPosition: ''
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: fileupload
+            tab: Gallery

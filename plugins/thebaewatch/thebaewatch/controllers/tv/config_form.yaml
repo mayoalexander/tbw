@@ -1,0 +1,10 @@
+name: Tv
+form: $/thebaewatch/thebaewatch/models/tv/fields.yaml
+modelClass: Thebaewatch\Thebaewatch\Models\Tv
+defaultRedirect: thebaewatch/thebaewatch/tv
+create:
+    redirect: 'thebaewatch/thebaewatch/tv/update/:id'
+    redirectClose: thebaewatch/thebaewatch/tv
+update:
+    redirect: thebaewatch/thebaewatch/tv
+    redirectClose: thebaewatch/thebaewatch/tv

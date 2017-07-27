@@ -1,0 +1,158 @@
+==
+{% set modelData = modelsList.records %}
+{% set displayColumn = modelsList.displayColumn %}
+{% set noRecordsMessage = modelsList.noRecordsMessage %}
+{% set detailsPage = modelsList.detailsPage %}
+{% set detailsKeyColumn = modelsList.detailsKeyColumn %}
+{% set detailsUrlParameter = modelsList.detailsUrlParameter %}
+
+<style type="text/css">
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+    max-height: 66vh;
+    margin: auto;
+}
+
+.portfolio-heading {
+    padding-top:8em;
+}
+.portfolio .box .cover {
+    background-color: rgba(0,0,0,0.0);
+}
+.portfolio .masonry {
+    background-color: #fff;
+}
+</style>
+
+
+            <!-- Section 6 -->
+            <section id="section-6" class="portfolio no-padding-bottom" style="padding-top:0px;">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <!-- Begin masonry -->
+                        <div class="masonry popup-gallery">
+
+                            <!-- Begin portfolio heading -->
+                            <div class="box col-md-4 col-sm-6">
+                                <div class="box-inner portfolio-heading">
+                                    <a href="/models/" class="portfolio-link"></a>
+                                    <div class="cover"></div>
+                                    <!-- Begin Heading -->
+                                    <div class="heading heading-md align-center">
+                                        <h1><span class="bg-main text-white">M</span>odels</h1>
+                                        <p>View All <i class="fa fa-arrow-right"></i></p>
+                                    </div>
+                                    <!-- End Heading -->
+                                </div>
+                            </div>
+                            <!-- End portfolio heading -->
+
+                                {% set inc = 1 %}
+                                {% for model in modelData %}
+                                {% if model.public==1 %}
+
+                                    <div class="box box-{{inc}} col-md-4 col-sm-6">
+                                        <div class="box-inner" style="max-height: 450px;">
+                                            <a href="#model-{{model.slug}}" class="portfolio-link inline-popup-trigger"></a>
+                                            <div class="cover"></div>
+                                            <img class="thumbnail" src="{{model.gallery[0].thumb(600,'auto')}}" alt="image">
+                                            <div class="caption align-center">
+                                                <h3 class="entry-count">{{model.name}}</h3>
+
+                                                <!-- <img src="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/img/portfolio/caption-img/2.png" alt="image"> -->
+                                            </div>
+                                            <h3 class="entry-count">#0{{inc}}</h3>
+                                        </div>
+
+                                        <!-- Begin inline popup content. Class "mfp-hide" is required to make dialog hidden -->
+                                        <div id="model-{{model.slug}}" class="inline-popup mfp-hide">
+                                            <div class="inline-popup-inner">
+                                                <div class="row">
+                                                    <div class="col-md-8">
+
+
+                                                        <div class="owl-carousel margin-bottom-50" data-items="1" data-loop="true" data-dots="true" data-dots-speed="600" data-nav="true" data-nav-speed="600">
+                                                            {% for image in model.gallery %}
+                                                                <a href=""><img class="thumbnail" src="{{image.thumb(1200,'auto')}}" alt="{{model.instagram}}"></a>
+                                                            {% endfor %}
+                                                        </div>
+                                                        <!-- End content carousel -->
+
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <ul>
+                                                            <li>Instagram: <strong><a href="http://twitter.com/{{model.instagram}}" target="_blank">@{{model.instagram}}</a></strong></li>
+                                                            <li>Twitter: <strong><a href="http://twitter.com/{{model.twitter}}" target="_blank">@{{model.twitter}}</a></strong></li>
+                                                            <li>Website: <strong><a href="{{model.website}}" target="_blank">{{model.website}}</a></strong></li>
+                                                            <hr>
+                                                            {% set shareText = "Checkout @"~model.instagram~" at THEBAE.WATCH/model/"~model.instagram %}
+                                                            <a href="https://twitter.com/intent/tweet?text={{shareText}}" target="_blank" class="btn btn-link btn-xs btn-rounded"><i class="fa fa-twitter"></i> Tweet</a>
+                                                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://THEBAE.WATCH/model/{{model.instagram}}" target="_blank" class="btn btn-link btn-xs btn-rounded"><i class="fa fa-facebook"></i> Share</a>
+                                                        </ul>
+                                                        <a href="/model/{{model.instagram}}" class="btn btn-danger btn-rounded btn-lg margin-top-40">View Profile</a>
+                                                        <br>
+
+                                                    </div>
+
+                                                    <div class="col-md-8 margin-bottom-20 hidden">
+                                                        <h1 class="no-margin-top">{{model.name}}</h1>
+                                                        <p>{{model.description}}</p>
+                                                    </div>
+                                                    <div class="col-md-4 margin-bottom-20 padding-left-40 hidden">
+                                                        <ul>
+                                                            <li>Instagram: <strong><a href="http://twitter.com/{{model.instagram}}" target="_blank">@{{model.instagram}}</a></strong></li>
+                                                            <li>Twitter: <strong><a href="http://twitter.com/{{model.twitter}}" target="_blank">@{{model.twitter}}</a></strong></li>
+                                                            <li>Website: <strong><a href="{{model.website}}" target="_blank">{{model.website}}</a></strong></li>
+                                                            <li>Copyright ©2017, All Rights Reserved</li>
+                                                        </ul>
+                                                        <a href="/model/{{model.slug}}" class="btn btn-danger btn-rounded btn-lg margin-top-40">View Full Profile</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
+                                        </div>
+                                        <!-- End inline popup content -->
+
+                                    </div>
+                                    {% set inc = inc+1 %}
+                                {% endif %}
+                                {% endfor %}
+                            
+
+
+                        </div>
+                        <!-- End masonry -->
+                        
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </section>
+
+
+
+                                                        <!-- Begin content carousel (http://www.owlcarousel.owlgraphic.com)
+                                                        ============================ 
+                                                        * Available carousel data attributes:
+                                                            data-items="1".......................(items visible on desktop)
+                                                            data-items-mobile-portrait="1".......(items visible on mobiles)
+                                                            data-items-mobile-landscape="1"......(items visible on mobiles)
+                                                            data-items-tablet="1"................(items visible on tablets)
+                                                            data-loop="true".....................(true/false)
+                                                            data-margin="10".....................(space between items)
+                                                            data-center="false"..................(true/false)
+                                                            data-start-position="0"..............(item start position)
+                                                            data-animate-in="fadeIn".............(more animations: http://daneden.github.io/animate.css/)
+                                                            data-animate-out="fadeOut"...........(more animations: http://daneden.github.io/animate.css/)
+                                                            data-mouse-drag="true"...............(true/false)
+                                                            data-autoheight="false"..............(true/false)
+                                                            data-autoplay="true".................(true/false)
+                                                            data-autoplay-timeout="5000".........(milliseconds)
+                                                            data-autoplay-hover-pause="true".....(true/false)
+                                                            data-autoplay-speed="800"............(milliseconds)
+                                                            data-nav="true"......................(true/false)
+                                                            data-nav-speed="800".................(milliseconds)
+                                                            data-dots="true".....................(true/false)
+                                                            data-dots-speed="800"................(milliseconds)
+                                                        -->
+

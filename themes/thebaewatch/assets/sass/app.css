@@ -1,0 +1,147 @@
+@import url("https://blackrockdigital.github.io/startbootstrap-modern-business/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Nunito|Poppins");
+@import url("https://blackrockdigital.github.io/startbootstrap-modern-business/css/modern-business");
+@import url("https://blackrockdigital.github.io/startbootstrap-modern-business/font-awesome/css/font-awesome.min.css");
+body {
+  overflow-x: hidden;
+  margin-top: 50px; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #757575;
+  /* LINKS */
+  /* PAGE HEADERS */
+  /* Breaks */ }
+  body a {
+    color: #FF69B4; }
+    body a:hover {
+      color: #009abb;
+      text-decoration: none; }
+  body .page-header, body h1, body h2 {
+    color: #FF69B4; }
+  body hr, body .page-header {
+    border-color: #FF69B4; }
+  body .container-padded-large {
+    padding-top: 5em;
+    padding-bottom: 5em; }
+
+.carousel {
+  box-shadow: 0px -4px 30px #101010; }
+  .carousel .carousel-caption h1, .carousel .carousel-caption h2 {
+    font-size: 5vmin;
+    font-weight: 700;
+    text-transform: uppercase; }
+
+/* NAVBAR */
+.navbar-inverse {
+  background-color: rgba(255, 105, 180, 0.9);
+  border: none;
+  box-shadow: 0px 0px 10px #101010; }
+  .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+    color: #ffffff; }
+  .navbar-inverse li {
+    transition: all 0.2s; }
+  .navbar-inverse li:hover {
+    background-color: rgba(243, 69, 156, 0.9); }
+  .navbar-inverse .navbar-toggle {
+    border-color: transparent; }
+    .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+      background-color: rgba(243, 69, 156, 0.9); }
+
+/* PANELS */
+.panel, .well {
+  background-color: #dadada;
+  border-color: transparent;
+  box-shadow: none; }
+  .panel .panel-heading, .well .panel-heading {
+    background-color: #e6e6e6; }
+
+/* BUTTONS */
+.btn {
+  border-radius: 1px;
+  background-color: transparent;
+  border-color: #ffffff;
+  border: 1px solid #757575;
+  color: #757575;
+  transition: all 0.2s; }
+  .btn .btn-default {
+    border: 1px solid #757575; }
+    .btn .btn-default:hover {
+      background-color: transparent;
+      border: 1px solid #757575; }
+  .btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #757575; }
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.25rem;
+  color: #e3e3e3; }
+
+/* PARALLAX */
+.parallax {
+  min-height: 40vh;
+  background-color: #101010;
+  background-size: cover;
+  background-attachment: fixed; }
+
+/* GALLERY */
+.media-gallery {
+  display: flex;
+  flex-wrap: wrap; }
+  .media-gallery .media-gallery-item, .media-gallery .media-gallery-item-nodim {
+    min-width: 350px;
+    height: 250px;
+    overflow: hidden;
+    flex: 1;
+    padding: 0;
+    border: 1px solid transparent; }
+    .media-gallery .media-gallery-item h1, .media-gallery .media-gallery-item h2, .media-gallery .media-gallery-item h3, .media-gallery .media-gallery-item h4, .media-gallery .media-gallery-item-nodim h1, .media-gallery .media-gallery-item-nodim h2, .media-gallery .media-gallery-item-nodim h3, .media-gallery .media-gallery-item-nodim h4 {
+      z-index: 1; }
+    .media-gallery .media-gallery-item img, .media-gallery .media-gallery-item-nodim img {
+      transition: all 0.5s;
+      width: 100%; }
+  .media-gallery .media-gallery-item img {
+    filter: brightness(40%); }
+  .media-gallery .media-gallery-item-nodim h1, .media-gallery .media-gallery-item-nodim h2, .media-gallery .media-gallery-item-nodim h3, .media-gallery .media-gallery-item-nodim h4 {
+    color: #fff;
+    background-color: rgba(255, 105, 180, 0.6);
+    padding: 10px 13px;
+    display: inline-block; }
+
+.image-gallery .image-gallery-item {
+  margin-bottom: 30px; }
+  .image-gallery .image-gallery-item:hover {
+    cursor: pointer; }
+
+/* MODAL */
+.modal-dialog .modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .modal-dialog .modal-content img {
+    width: 100%;
+    flex: 1; }
+
+/* FLEXBOX */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; }
+
+.flex-item {
+  flex: 1;
+  min-width: 200px; }
+
+@media (max-width: 600px) {
+  .media-gallery {
+    flex-direction: column; } }
+
+/*# sourceMappingURL=app.css.map */

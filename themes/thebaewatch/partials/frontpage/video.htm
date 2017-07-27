@@ -1,0 +1,72 @@
+==
+{% set videoList = tvList.records %}
+{% set displayColumn = tvList.displayColumn %}
+{% set noRecordsMessage = tvList.noRecordsMessage %}
+{% set detailsPage = tvList.detailsPage %}
+{% set detailsKeyColumn = tvList.detailsKeyColumn %}
+{% set detailsUrlParameter = tvList.detailsUrlParameter %}
+
+
+
+
+
+            <!-- Section 5 -->
+            <section id="section-5" class="video-demonstration split-box no-padding">
+                <div class="container-fluid">
+                    <div class="row">
+                    
+                        {% for video in videoList %}
+                        
+                            <div class="row-same-height"> 
+    
+                                <div class="col-left col-lg-6 col-lg-height no-padding">
+                                    <div class="col-inner no-padding">
+                                        {% set vidInc = 0 %}
+                                        {% for episode in video.episodes %}
+                                            {% if vidInc==0 %}
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe data-src="https://www.youtube.com/embed/{{episode.media_id |replace({'https://youtu.be/': ''}) }}?modestbranding=1&showinfo=0&playsinline=1&autoplay=0" width="500" height="281" allowfullscreen></iframe>
+                                            </div>
+                                            {% else %}
+                                                <!-- DO NOTHING -->
+                                            {%endif %}
+                                            {% set vidInc = vidInc+1 %}
+                                        {% endfor %}
+                                            
+                                        
+                                        <!-- End embed video -->
+    
+                                    </div> <!-- /.col-inner -->
+                                </div> <!-- /.col -->
+    
+                                <div class="col-right col-lg-6 col-lg-height col-middle no-padding bg-light-gray">
+                                    <div class="col-inner">
+    
+                                        <!-- Begin Heading -->
+                                        <div class="heading heading-xlg">
+                                            <h1><span class="bg-main text-white">TV</span>{{video.title}}</h1>
+                                        </div>
+                                        <!-- End Heading -->
+                                    
+                                    
+    
+                                        <p class="lead">
+                                            {{video.description}}
+                                        </p>
+                                        <p>
+                                            <a href="/show/{{video.slug}}" class="btn btn-inverse btn-rounded btn-lg">View More Videos</a>
+                                        </p>
+    
+                                    </div> <!-- /.col-inner -->
+                                </div> <!-- /.col -->
+    
+                            </div>
+                                
+                            {% else %}
+                                <li class="no-data">{{ noRecordsMessage }}</li>
+                            {% endfor %}
+
+
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </section>

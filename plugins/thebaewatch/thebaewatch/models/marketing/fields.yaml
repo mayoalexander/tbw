@@ -1,0 +1,23 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    subtitle:
+        label: Subtitle
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    description:
+        label: 'Text area'
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: textarea
+    photo:
+        label: Photo
+        oc.commentPosition: ''
+        mode: image
+        span: auto
+        type: mediafinder

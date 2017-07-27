@@ -1,0 +1,4 @@
+title: Models
+modelClass: Thebaewatch\Thebaewatch\Models\Models
+toolbar:
+    buttons: reorder_toolbar

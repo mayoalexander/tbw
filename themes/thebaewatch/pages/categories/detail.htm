@@ -1,0 +1,30 @@
+title = "categories"
+url = "/categories/:slug"
+layout = "baewatch-main"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Thebaewatch\Thebaewatch\Models\Categories"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+
+
+<hr></hr>
+<hr></hr>
+<hr></hr>
+<hr></hr>
+
+<div class="container">
+		{% for model in record.models %}
+			{{ model }}
+		{% endfor %}
+</div>
+
+

@@ -1,0 +1,4 @@
+title: Roles
+modelClass: Thebaewatch\Thebaewatch\Models\Roles
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,57 @@
+==
+
+
+{% set categories = categoriesList.records %}
+{% set displayColumn = categoriesList.displayColumn %}
+{% set noRecordsMessage = categoriesList.noRecordsMessage %}
+{% set detailsPage = categoriesList.detailsPage %}
+{% set detailsKeyColumn = categoriesList.detailsKeyColumn %}
+{% set detailsUrlParameter = categoriesList.detailsUrlParameter %}
+
+
+
+        <nav id="cd-lateral-nav">
+
+            <div class="nav-inner">
+
+                <!-- menu header -->
+                <div class="menu-header">Explore</div>
+
+                <!-- Begin single links wrapper -->
+                <ul class="cd-navigation cd-single-item-wrapper">
+                    <li><a href="/" class="page-scroll">Home</a></li>
+                    <li><a href="/models" class="page-scroll">Models</a></li>
+                    <li><a href="/contact" class="page-scroll">Contact</a></li>
+                </ul>
+                <!-- End single links wrapper -->
+
+
+                <!-- Begin links with sub menu -->
+                <ul class="cd-navigation">
+
+                    <!-- item has children -->
+                    <li class="item-has-children">
+                        <a href="#0">Models</a>
+                        <ul class="sub-menu">
+                            {% for category in categories %}
+                                <li><a href="/categories/{{category.slug}}">{{category.title}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+
+
+                </ul>
+                <!-- End links with sub menu -->
+                <div class="menu-separator"></div>
+
+
+                <!-- Socials icons (replace "http://link.com" widh your own link) -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/{{this.theme.facebook}}" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/{{this.theme.twitter}}" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                    <a href="https://instagram.com/{{this.theme.instagram}}" target="_blank"><i class="fa fa-instagram-square"></i></a>
+                </div>
+
+            </div>
+
+        </nav>

@@ -1,0 +1,28 @@
+columns:
+    id:
+        label: ID
+        type: number
+    title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    subtitle:
+        label: Subtitle
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: 'thebaewatch.thebaewatch::lang.plugin.description'
+        type: text
+        searchable: true
+        sortable: true
+    twitter:
+        label: twitter
+        type: text
+    instagram:
+        label: instagram
+        type: text
+    slug:
+        label: slug
+        type: text

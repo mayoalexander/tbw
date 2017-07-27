@@ -1,0 +1,28 @@
+name: thebaewatch
+description: 'This is thebae.watch'
+author: 'Alexander Mayo'
+homepage: 'http://thebae.watch'
+code: 5ks4kvo8sjgn53u
+
+
+
+form:
+    fields:
+        phone:
+            label: Phone
+            default: 777-777-7777!
+        address:
+            label: Location Address
+        instagram:
+            label: Instagram
+        twitter:
+            label: Twitter
+        facebook:
+            label: Facebook
+        email:
+            label: Email
+        slogan:
+            label: Slogan
+        mission:
+            label: Mission
+            type: textarea

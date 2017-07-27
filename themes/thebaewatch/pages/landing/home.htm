@@ -1,0 +1,26 @@
+title = "Home"
+url = "/"
+layout = "baewatch-main"
+description = "The Bae Watch is dedicated to empowering women and placing them in opportunities that create value."
+is_hidden = 0
+
+
+
+[builderList tvList]
+modelClass = "Thebaewatch\Thebaewatch\Models\Tv"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 1
+pageNumber = "{{ :page }}"
+sortColumn = "id"
+sortDirection = "desc"
+==
+{% partial 'frontpage/hero' %}
+{% partial 'frontpage/overview' %}
+{% partial 'frontpage/video' %}
+{% partial 'frontpage/models' %}
+{% partial 'frontpage/blog' %}
+{% partial 'frontpage/contact' %}

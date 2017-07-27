@@ -1,0 +1,24 @@
+title = "Models"
+url = "/models"
+layout = "baewatch-main"
+is_hidden = 0
+
+
+[builderList modelsList]
+modelClass = "Thebaewatch\Thebaewatch\Models\Models"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 20
+pageNumber = "{{ :page }}"
+sortColumn = "id"
+sortDirection = "desc"
+
+
+==
+
+    {% partial "models/gallery" %}
+
+   

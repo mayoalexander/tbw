@@ -1,0 +1,10 @@
+name: Blog
+form: $/thebaewatch/thebaewatch/models/blog/fields.yaml
+modelClass: Thebaewatch\Thebaewatch\Models\Blog
+defaultRedirect: thebaewatch/thebaewatch/blog
+create:
+    redirect: 'thebaewatch/thebaewatch/blog/update/:id'
+    redirectClose: thebaewatch/thebaewatch/blog
+update:
+    redirect: thebaewatch/thebaewatch/blog
+    redirectClose: thebaewatch/thebaewatch/blog

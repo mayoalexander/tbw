@@ -1,0 +1,46 @@
+==
+{% set models = modelList.records %}
+    {% set displayColumn = modelList.displayColumn %}
+    {% set noRecordsMessage = modelList.noRecordsMessage %}
+    {% set detailsPage = modelList.detailsPage %}
+    {% set detailsKeyColumn = modelList.detailsKeyColumn %}
+    {% set detailsUrlParameter = modelList.detailsUrlParameter %}
+    
+    <ul class="record-list media-gallery" style="list-style-type:none;padding:0;">
+        {% for record in models %}
+            <div class="col-md-4 media-gallery-item">
+            
+            <a href="/model/{{ record.instagram }}">
+                <div class="card card-inverse">
+                  <img class="card-img" src="{{record.gallery[0].thumb(320,auto) }}" alt="Card image">
+                  <div class="card-img-overlay">
+                    <h3 class="card-title">{{record.name}}</h3>
+                    <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                  </div>
+                </div>
+            </a>
+
+            </div>
+        {% else %}
+            <li class="no-data">{{ noRecordsMessage }}</li>
+        {% endfor %}
+    </ul>
+    
+    {% if models.lastPage > 1 %}
+        <ul class="pagination">
+            {% if models.currentPage > 1 %}
+                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (models.currentPage-1) }) }}">&larr; Prev</a></li>
+            {% endif %}
+    
+            {% for page in 1..models.lastPage %}
+                <li class="{{ records.currentPage == page ? 'active' : null }}">
+                    <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                </li>
+            {% endfor %}
+    
+            {% if models.lastPage > models.currentPage %}
+                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
+            {% endif %}
+        </ul>
+    {% endif %}

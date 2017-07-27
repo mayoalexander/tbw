@@ -1,0 +1,4 @@
+title: Marketing
+modelClass: Thebaewatch\Thebaewatch\Models\Marketing
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,10 @@
+name: Models
+form: $/thebaewatch/thebaewatch/models/models/fields.yaml
+modelClass: Thebaewatch\Thebaewatch\Models\Models
+defaultRedirect: thebaewatch/thebaewatch/models
+create:
+    redirect: 'thebaewatch/thebaewatch/models/update/:id'
+    redirectClose: thebaewatch/thebaewatch/models
+update:
+    redirect: thebaewatch/thebaewatch/models
+    redirectClose: thebaewatch/thebaewatch/models
