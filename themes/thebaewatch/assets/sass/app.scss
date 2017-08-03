@@ -1,250 +1,63 @@
 
-@import url('https://blackrockdigital.github.io/startbootstrap-modern-business/css/bootstrap.min.css');
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Nunito|Poppins');
-@import url('https://blackrockdigital.github.io/startbootstrap-modern-business/css/modern-business');
-@import url('https://blackrockdigital.github.io/startbootstrap-modern-business/font-awesome/css/font-awesome.min.css');
-
-
-
-$brand_primary:#FF69B4;
-$brand_default:#0DFFA5;
-$brand_blue:#00afd4;
-$brand_blue_dark:#009abb;
-$brand_blue_transparent:rgba(0, 175, 212, 0.97);
-$brand_pink:#FF69B4;
-$brand_pink_dark:rgba(243, 69, 156, 0.9);
-$brand_pink_transparent:rgba(255, 105, 180, 0.9);
-$brand_pink_transparent_more:rgba(255, 105, 180, 0.6);
-
-$brand_red:#FF4D0D;
-$brand_yellow:#FFA300;
-$brand_green:#5BE800;
-$brand_purple:#8E0CE8;
-$brand_white:#ffffff;
-
-// $brand_bg:#171717;
-$brand_bg:#ffffff;
-$brand_body_text_light:#757575;
-$brand_panel:#dadada;
-$brand_panel_alt:#e6e6e6;
-$brand_panel_border:#1d1d1d;
-
-$transition_duration_time:all 0.2s;
-$btn_border_default:1px solid $brand_body_text_light;
-
-
-// html,
 body {
-	overflow-x:hidden;
-	margin-top:50px;
+	border:0px;
+	margin-top:55px;
 }
 
-body {
-	font-family: 'Poppins', sans-serif;
-	background-color:$brand_bg;
-	color:$brand_body_text_light;
-
-	/* LINKS */
-	a {
-		color:$brand_pink;
-		&:hover {
-			color:$brand_blue_dark;
-			text-decoration: none;
-		}
-	}
-
-	/* PAGE HEADERS */
-	.page-header, h1, h2 {
-		color:$brand_pink;
-	}
-
-	/* Breaks */
-	hr, .page-header {
-		border-color:$brand_pink;
-	}
-	.container-padded-large {
-		padding-top:5em;
-		padding-bottom:5em;
-	}
-}
-
-
-.carousel {
-	box-shadow:0px -4px 30px #101010;
-	.carousel-caption {
-		h1, h2 {
-			font-size: 5vmin;
-		    font-weight: 700;
-		    text-transform: uppercase;
-		}
-	} 
-
-}
-
-
-
-/* NAVBAR */
-.navbar-inverse {
-	background-color:$brand_pink_transparent;
-	border:none;
-	box-shadow:0px 0px 10px #101010;
-	.navbar-brand, .navbar-nav>li>a {
-		color:$brand_white;
-	}
-	li {
-		transition:$transition_duration_time;
-	}
-	li:hover {
-		background-color:$brand_pink_dark;
-	}
-	.navbar-toggle {
-		border-color:transparent;
-		&:focus,&:hover {
-			background-color:$brand_pink_dark;
-		}
-
-	}
-}
-
-
-/* PANELS */
-.panel, .well {
-	background-color:$brand_panel;
-    border-color: transparent;
-    box-shadow: none;
-	.panel-heading{
-		background-color:$brand_panel_alt;
-	}
-}
-
-
-/* BUTTONS */
-.btn {
-	border-radius:1px;
-	background-color:transparent;
-	border-color:$brand_bg;
-    border: $btn_border_default;
-    color: $brand_body_text_light;
-    transition:$transition_duration_time;
-	.btn-default {
-	    border: $btn_border_default;
-
-	    &:hover {
-			background-color:transparent;
-			border: $btn_border_default;
-		}
-	}
-	&:hover {
-		background-color:transparent;
-		color:$brand_white;
-		border: $btn_border_default;
-	}
-}
-
-
-
-.card-img-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1.25rem;
-    color:#e3e3e3;
-}
-
-
-/* PARALLAX */
-.parallax {
-    min-height: 40vh; 
-    background-color:#101010;
-    background-size:cover;
-    background-attachment:fixed;
-}
-
-
-
-/* GALLERY */
-.media-gallery {
-    display:flex;
-    flex-wrap:wrap;
-	.media-gallery-item, .media-gallery-item-nodim {
-		min-width:350px;
-		height:250px;
-		overflow:hidden;
-		flex:1;
-	    padding:0;
-	    border:1px solid transparent;
-	    h1,h2,h3,h4 {
-	    	z-index:1;
-	    }
-		img {
-			transition: all 0.5s;
-		    width:100%;
-		}
-		// &:hover img {
-		// 	transform:scale(1.1);
-		// }
-	}
-	.media-gallery-item {
-		img {
-		    filter:brightness(40%);//blur(10px);
-		}
-	}
-	.media-gallery-item-nodim {
-	    h1,h2,h3,h4 {
-	    	color:#fff;
-	    	background-color:$brand_pink_transparent_more;
-		    padding: 10px 13px;
-		    display: inline-block;
-	    }
-	}
-}
-
-.image-gallery {
-	.image-gallery-item {
-		margin-bottom:30px;
-		&:hover {
-			cursor: pointer;
-		}
-	}
-}
-
-
-/* MODAL */
-.modal-dialog {
-
-	.modal-content {
-		display:flex;
-		flex-direction:column;
-	    justify-content: center;
-		align-items: center;
-		img {
-			width:100%;
-			flex:1;
-		}
+header {
+	background-color:#ffffff;
+	height:55px;
+	box-shadow:0px 0px 13px 5px #101010;
+	#cd-logo {
+	    padding: 12px;
+	    position: relative;
+	    top: 0px;
+	    left: 0px;
+	    margin:0px;
 	}	
+	#cd-menu-trigger {
+		top: 0px;
+		right: 0px;
+		height:55px;
+	}
+}
+
+section {
+	background-color:#111111;
+}
+.portfolio {
+	.thumbnail {
+		transform:scale(1.2);
+	}
+	.box {
+		.entry-count {
+			position:relative;
+		}
+	}
+}
+
+
+.contact-section {
+	.cover {
+		background-color:#111111;
+	}
 }
 
 
 
-/* FLEXBOX */
-.flex-container {
-	display:flex;
-	flex-wrap:wrap;
-	flex-direction:row;
-}
-.flex-item {
-	flex:1;
-	min-width:200px;
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+    max-height: 66vh;
+    margin: auto;
 }
 
-
-
-
-
-@media (max-width: 600px) {
-  .media-gallery {
-    flex-direction:column;
-  }
+.portfolio-heading {
+    padding-top:20em;
+}
+.portfolio .box .cover {
+    background-color: rgba(0,0,0,0.0);
+}
+.portfolio .masonry {
+    background-color: #111111;
 }

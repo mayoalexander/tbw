@@ -5,12 +5,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@{{model.instagram}} | THEBAEWATCH</title>
-        <meta name="description" content="@{{model.instagram}} | THEBAEWATCH">
+        <title>{{this.page.title}} | THEBAEWATCH</title>
+        <meta name="description" content="{{this.page.description}}">
         <meta name="keywords" content="{{this.page.description}}" />
 
         <meta name="description" content='FREELABEL // TV | RADIO | MAG '/>
@@ -31,64 +30,23 @@
         <meta property='og:image:width' content='1024'>
         <meta property='og:image:height' content='1024'>
 
-        <!-- Mobile Metas -->
-
-        <!-- Google fonts - (more info: https://www.google.com/fonts) -->
-        <link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-
-        <!-- Libs and Plugins CSS -->
-        <link rel="stylesheet" href="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/vendor/bootstrap/css/bootstrap.min.css"> <!-- bootstrap CSS (more info: http://getbootstrap.com) -->
-        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-        <link rel="stylesheet" href="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/vendor/ytplayer/css/jquery.mb.YTPlayer.min.css"> <!-- YTPlayer CSS (more info: https://github.com/pupunzi/jquery.mb.YTPlayer) -->
-        <link rel="stylesheet" href="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/vendor/magnific-popup/css/magnific-popup.css"> <!-- Magnific Popup CSS (more info: http://dimsemenov.com/plugins/magnific-popup/) -->
-
-        <link rel="stylesheet" href="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/vendor/owl-carousel/css/owl.carousel.min.css"> <!-- owl carousel CSS (more info: http://www.owlcarousel.owlgraphic.com) -->
-        <link rel="stylesheet" href="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/vendor/owl-carousel/css/owl.theme.default.css"> <!-- owl carousel theme CSS (more info: http://www.owlcarousel.owlgraphic.com) -->
-
-        <!-- Theme navigation menu CSS (more info: http://codyhouse.co/gem/secondary-expandable-navigation) -->
-        <link rel="stylesheet" href="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/css/menu.css">
-
-        <!-- Theme helper classes CSS -->
-        <link rel="stylesheet" href="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/css/helper.css">
-
-        <!-- Theme master CSS -->
-        <link rel="stylesheet" href="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/css/theme.css">
-
-        <!-- Theme custom CSS (all your CSS customizations) -->
-        <link rel="stylesheet" href="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/css/custom.css">
-
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
+        {% partial "template/resources" %}
+        
     </head>
 
     <body>
 
         <!-- Page preloader (display loading animation while page loads) -->
-        <div id="preloader"><div class="pulse"></div></div>
-
-        <!-- Begin page borders -->
-        <div class="border-top"></div>
-        <div class="border-bottom"></div>
-        <div class="border-left"></div>
-        <div class="border-right"></div>
-        <!-- End page borders -->
-
+        <!-- <div id="preloader"><div class="pulse"></div></div> -->
 
         <!-- /////////////////////////////
         ////////// Begin header //////////
         ////////////////////////////// -->
 
         <header class="is-fixed">
-            <a id="cd-logo" href="/"><img src="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/img/logo.png" alt="image"></a>
+            <a id="cd-logo" class="baewatch-logo" href="/">
+                THEBAE.WATCH
+            </a>
             <nav id="cd-top-nav">
                 <!-- <ul> 
                     <li><a href="index.html">Home</a></li>
@@ -122,4 +80,6 @@
         //////////////////////////////////// -->
 
         <div id="body-content">
+
+
 
