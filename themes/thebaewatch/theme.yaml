@@ -26,3 +26,5 @@ form:
         mission:
             label: Mission
             type: textarea
+        call-to-action:
+            label: Call To Action Button
