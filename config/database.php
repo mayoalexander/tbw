@@ -58,7 +58,7 @@ return [
             'port'      => 3306,
             'database'  => 'thebaewatch_october',
             'username'  => 'amayo',
-            'password'  => 'Redwalrus123!',
+            'password'  => 'Simplicity93!',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
