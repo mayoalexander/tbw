@@ -17,104 +17,90 @@ notFoundMessage = "Record not found"
 
 
 
+<section class="products section">
+	<div class="container">
+		<div class="row">
 
-<!-- Section 6 -->
-<section id="section-6" class="portfolio no-padding-bottom" style="padding-top:0px;">
-    <div class="container-fluid">
-        <div class="row">
 
-            <!-- Begin masonry -->
-            <div class="masonry popup-gallery">
-
-                <!-- Begin portfolio heading -->
-                <div class="box col-md-4 col-sm-6">
-                    <div class="box-inner portfolio-heading">
-                        <a href="/models/" class="portfolio-link"></a>
-                        <div class="cover"></div>
-                        <!-- Begin Heading -->
-                        <div class="heading heading-md align-center">
-                            <h1>{{record.title}}</h1>
-                            <p>View All <i class="fa fa-arrow-right"></i></p>
-                        </div>
-                        <!-- End Heading -->
-                    </div>
-                </div>
-                <!-- End portfolio heading -->
-
+			<div class="col-md-12 text-center">
+				<h2 class="page-header">{{record.title}}</h2>
+			</div>
+			
                     {% set myArr = 'id' %}
                     {% set inc = 1 %}
                     {% for model in record.models %}
                     {% if model.public==1 and myArr in model.categories|keys%}
 
-                        <div class="box box-{{inc}} col-md-4 col-sm-6">
-                            <div class="box-inner" style="max-height: 450px;">
-                                <a href="#model-{{model.slug}}" class="portfolio-link inline-popup-trigger"></a>
-                                <div class="cover"></div>
-                                <img class="thumbnail" src="{{model.gallery[0].thumb(600,'auto')}}" alt="image">
-                                <div class="caption align-center">
-                                    <h3 class="entry-count">{{model.name}}</h3>
 
-                                    <!-- <img src="http://themetorium.net/demo/html/wrapbootstrap/red/v1.4/theme/img/portfolio/caption-img/2.png" alt="image"> -->
-                                </div>
-                                <h3 class="entry-count">#0{{inc}}</h3>
-                            </div>
+                    <div class="col-md-12">
+                    	<h3>{{model.name}}</h5>
+                    </div>
+		                    {% for image in model.gallery %}
+			                    <div class="col-md-4">
+									<div class="product-item">
+										<div class="product-thumb">
+											<img class="img-responsive" src="{{image.thumb(1200,'auto')}}" alt="product-img">
+											<div class="preview-meta">
+												<ul>
+													<li>
+														<span data-toggle="modal" data-target="#product-modal">
+															<i class="tf-ion-ios-search-strong"></i>
+														</span>
+													</li>
+													<li>
+								                        <a href="#"><i class="tf-ion-ios-heart"></i></a>
+													</li>
+													<li>
+														<a href=""><i class="tf-ion-android-cart"></i></a>
+													</li>
+												</ul>
+							              	</div>
+										</div>
+										<div class="product-content">
+											<h4><a href="product-single.html">{{model.name}}</a></h4>
+											<p class="price">$200</p>
+										</div>
+									</div>
+								</div>
+                            {% endfor %}
 
-                            <!-- Begin inline popup content. Class "mfp-hide" is required to make dialog hidden -->
-                            <div id="model-{{model.slug}}" class="inline-popup mfp-hide">
-                                <div class="inline-popup-inner">
-                                    <div class="row">
-                                        <div class="col-md-8">
-
-
-                                            <div class="owl-carousel margin-bottom-50" data-items="1" data-loop="true" data-dots="true" data-dots-speed="600" data-nav="true" data-nav-speed="600">
-                                                {% for image in model.gallery %}
-                                                    <a href=""><img class="thumbnail" src="{{image.thumb(1200,'auto')}}" alt="{{model.instagram}}"></a>
-                                                {% endfor %}
-                                            </div>
-                                            <!-- End content carousel -->
-
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul>
-                                                <li>Instagram: <strong><a href="http://twitter.com/{{model.instagram}}" target="_blank">@{{model.instagram}}</a></strong></li>
-                                                <li>Twitter: <strong><a href="http://twitter.com/{{model.twitter}}" target="_blank">@{{model.twitter}}</a></strong></li>
-                                                <li>Website: <strong><a href="{{model.website}}" target="_blank">{{model.website}}</a></strong></li>
-                                                <li>Copyright ©2017, All Rights Reserved</li>
-                                            </ul>
-                                            <a href="/model/{{model.instagram}}" class="btn btn-danger btn-rounded btn-lg margin-top-40">View Profile</a>
-                                        </div>
-
-                                        <div class="col-md-8 margin-bottom-20 hidden">
-                                            <h1 class="no-margin-top">{{model.name}}</h1>
-                                            <p>{{model.description}}</p>
-                                        </div>
-                                        <div class="col-md-4 margin-bottom-20 padding-left-40 hidden">
-                                            <ul>
-                                                <li>Instagram: <strong><a href="http://twitter.com/{{model.instagram}}" target="_blank">@{{model.instagram}}</a></strong></li>
-                                                <li>Twitter: <strong><a href="http://twitter.com/{{model.twitter}}" target="_blank">@{{model.twitter}}</a></strong></li>
-                                                <li>Website: <strong><a href="{{model.website}}" target="_blank">{{model.website}}</a></strong></li>
-                                                <li>Copyright ©2017, All Rights Reserved</li>
-                                            </ul>
-                                            <a href="/model/{{model.slug}}" class="btn btn-danger btn-rounded btn-lg margin-top-40">View Full Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
-                            </div>
-                            <!-- End inline popup content -->
-
-                        </div>
                         {% set inc = inc+1 %}
                     {% endif %}
                     {% endfor %}
-                
 
 
-            </div>
-            <!-- End masonry -->
-            
-        </div> <!-- /.row -->
-    </div> <!-- /.container -->
+		
+		<!-- Modal -->
+		<div class="modal product-modal fade" id="product-modal">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<i class="tf-ion-close"></i>
+			</button>
+		  	<div class="modal-dialog " role="document">
+		    	<div class="modal-content">
+			      	<div class="modal-body">
+			        	<div class="row">
+			        		<div class="col-md-8 col-sm-6 col-xs-12">
+			        			<div class="modal-image">
+				        			<img class="img-responsive" src="images/shop/products/modal-product.jpg" alt="product-img">
+			        			</div>
+			        		</div>
+			        		<div class="col-md-4 col-sm-6 col-xs-12">
+			        			<div class="product-short-details">
+			        				<h2 class="product-title">GM Pendant, Basalt Grey</h2>
+			        				<p class="product-price">$200</p>
+			        				<p class="product-short-description">
+			        					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil cum. Illo laborum numquam rem aut officia dicta cumque.
+			        				</p>
+			        				<a href="cart.html" class="btn btn-main">Add To Cart</a>
+			        				<a href="product-single.html" class="btn btn-transparent">View Product Details</a>
+			        			</div>
+			        		</div>
+			        	</div>
+			        </div>
+		    	</div>
+		  	</div>
+		</div><!-- /.modal -->
+
+		</div>
+	</div>
 </section>
-
-

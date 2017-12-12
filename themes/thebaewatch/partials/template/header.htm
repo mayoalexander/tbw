@@ -1,60 +1,44 @@
 ==
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{this.page.title}} | THEBAEWATCH</title>
-        <meta name="description" content="{{this.page.description}}">
-        <meta name="keywords" content="{{this.page.description}}" />
-        {% partial "template/resources" %}
-    </head>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="{{this.theme.Mission}}">
+  
+  <meta name="author" content="{{this.theme.title}}">
 
-    <body>
+  <title>{{this.theme.title}}</title>
 
-        <!-- Page preloader (display loading animation while page loads) -->
-        <!-- <div id="preloader"><div class="pulse"></div></div> -->
+  <!-- Mobile Specific Meta-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="http://demo.themefisher.com/themefisher/aviato/images/favicon.png" />
+  
+  <!-- Themefisher Icon font -->
+  <link rel="stylesheet" href="http://demo.themefisher.com/themefisher/aviato/plugins/themefisher-font/style.css">
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="http://demo.themefisher.com/themefisher/aviato/plugins/bootstrap/css/bootstrap.min.css">
+  
+  <!-- Revolution Slider -->
+  <link rel="stylesheet" type="text/css" href="http://demo.themefisher.com/themefisher/aviato/plugins/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+  <link rel="stylesheet" type="text/css" href="http://demo.themefisher.com/themefisher/aviato/plugins/revolution-slider/revolution/fonts/font-awesome/css/font-awesome.css">
 
-        <!-- /////////////////////////////
-        ////////// Begin header //////////
-        ////////////////////////////// -->
+  <!-- REVOLUTION STYLE SHEETS -->
+  <link rel="stylesheet" type="text/css" href="http://demo.themefisher.com/themefisher/aviato/plugins/revolution-slider/revolution/css/settings.css">
+  <link rel="stylesheet" type="text/css" href="http://demo.themefisher.com/themefisher/aviato/plugins/revolution-slider/revolution/css/layers.css">
+  <link rel="stylesheet" type="text/css" href="http://demo.themefisher.com/themefisher/aviato/plugins/revolution-slider/revolution/css/navigation.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="http://demo.themefisher.com/themefisher/aviato/css/style.css">
 
-        <header class="is-fixed">
-            <a id="cd-logo" class="baewatch-logo" href="/">
-                THEBAE.WATCH
-            </a>
-            <nav id="cd-top-nav">
-                <!-- <ul> 
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#0">Register</a></li>
-                    <li><a href="#0">Login</a></li>
-                </ul> -->
-            </nav>
-            <!-- Menu trigger (menu button) -->
-            <a id="cd-menu-trigger" href="#0"><span class="cd-menu-icon"></span></a>
-        </header>
+</head>
 
-        <!-- /////////////////////////////
-        ////////// End header //////////
-        ////////////////////////////// -->
-
-
-        
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////
-        ////////// Begin menu  (more info: http://codyhouse.co/gem/secondary-expandable-navigation/) //////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-        {% partial 'template/navigation' %}
-
-        <!-- /////////////////////////
-        ////////// End menu //////////
-        ////////////////////////// -->
+<body id="body">
 
 
-        <!-- ///////////////////////////////////
-        ////////// Begin body content //////////
-        //////////////////////////////////// -->
-
-        <div id="body-content">
-
+{% partial "template/navigation" %}

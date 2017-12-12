@@ -1,0 +1,39 @@
+[builderList marketingContent]
+modelClass = "Thebaewatch\Thebaewatch\Models\Marketing"
+scope = "-"
+displayColumn = "photo"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList modelsList]
+modelClass = "Thebaewatch\Thebaewatch\Models\Models"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 20
+pageNumber = "{{ :page }}"
+sortColumn = "id"
+sortDirection = "desc"
+
+
+[builderList categoriesList]
+modelClass = "Thebaewatch\Thebaewatch\Models\Categories"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+==
+{% partial 'template/header' %}
+
+
+{% page %}
+
+
+{% partial 'template/footer' %}

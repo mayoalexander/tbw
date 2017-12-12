@@ -8,6 +8,8 @@ code: 5ks4kvo8sjgn53u
 
 form:
     fields:
+        title:
+            label: Brand Title
         phone:
             label: Phone
             default: 777-777-7777!
