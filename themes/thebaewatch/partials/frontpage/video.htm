@@ -6,63 +6,49 @@
 {% set detailsKeyColumn = tvList.detailsKeyColumn %}
 {% set detailsUrlParameter = tvList.detailsUrlParameter %}
 
-            <!-- Section 5 -->
-            <section id="section-5" class="video-demonstration split-box no-padding">
-                <div class="container-fluid">
-                    <div class="row">
-                    
-                        {% for video in videoList %}
-                        
-                            <div class="row-same-height"> 
-    
-                                <div class="col-left col-lg-6 col-lg-height no-padding">
-                                    <div class="col-inner no-padding">
-                                        {% set vidInc = 0 %}
-                                        {% for episode in video.episodes %}
-                                            {% if vidInc==0 %}
-                                            <div class="embed-responsive embed-responsive-16by9">
-                                                <iframe data-src="https://www.youtube.com/embed/{{episode.media_id |replace({'https://youtu.be/': ''}) }}?modestbranding=1&showinfo=0&playsinline=1&autoplay=0" width="500" height="281" allowfullscreen></iframe>
-                                            </div>
-                                            {% else %}
-                                                <!-- DO NOTHING -->
-                                            {%endif %}
-                                            {% set vidInc = vidInc+1 %}
-                                        {% endfor %}
-                                            
-                                        
-                                        <!-- End embed video -->
-    
-                                    </div> <!-- /.col-inner -->
-                                </div> <!-- /.col -->
-    
-                                <div class="col-right col-lg-6 col-lg-height col-middle no-padding bg-light-gray">
-                                    <div class="col-inner">
-    
-                                        <!-- Begin Heading -->
-                                        <div class="heading heading-xlg">
-                                            <h1><span class="bg-main text-white">TV</span>{{video.title}}</h1>
-                                        </div>
-                                        <!-- End Heading -->
-                                    
-                                    
-    
-                                        <p class="lead">
-                                            {{video.description}}
-                                        </p>
-                                        <p>
-                                            <a href="/show/{{video.slug}}" class="btn btn-inverse btn-rounded btn-lg">View More Videos</a>
-                                        </p>
-    
-                                    </div> <!-- /.col-inner -->
-                                </div> <!-- /.col -->
-    
-                            </div>
-
-                            {% else %}
-                                <li class="no-data">{{ noRecordsMessage }}</li>
-                            {% endfor %}
 
 
-                    </div> <!-- /.row -->
-                </div> <!-- /.container -->
-            </section>
+
+
+<section class="product-category section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title text-center">
+                    <h2>TV Series</h2>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="category-box">
+                    <a href="/show/{{ videoList[0].slug }}">
+                        <img src="{{ videoList[0].photo[0].path }}" alt="" />
+                        <div class="content">
+                            <h3>{{ videoList[0].title }}</h3>
+                            <p>{{ videoList[0].subtitle }}</p>
+                        </div>
+                    </a>    
+                </div>
+                <div class="category-box">
+                    <a href="/show/{{ videoList[1].slug }}">
+                        <img src="{{ videoList[1].photo[0].path }}" alt="" />
+                        <div class="content">
+                            <h3>{{ videoList[1].title }}</h3>
+                            <p>{{ videoList[1].subtitle }}</p>
+                        </div>
+                    </a>    
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="category-box category-box-2">
+                    <a href="/show/{{ videoList[2].slug }}">
+                        <img src="{{ videoList[2].photo[0].path }}" alt="" />
+                        <div class="content">
+                            <h3>{{ videoList[2].title }}</h3>
+                            <p>{{ videoList[2].subtitle }}</p>
+                        </div>
+                    </a>    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
