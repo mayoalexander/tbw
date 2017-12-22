@@ -35,35 +35,52 @@ notFoundMessage = "Record not found"
                     <div class="col-md-12">
                     	<h3>{{model.name}}</h5>
                     </div>
-		                    {% for image in model.gallery %}
-			                    <div class="col-md-4">
+	                    {% set break = false %}
+						{% for image in model.gallery if not break %}
+						    <!-- <h2>{{ image.thumb(1200,'auto') }}</h2> -->
+						    	<div class="col-md-4">
 									<div class="product-item">
 										<div class="product-thumb">
-											<img class="img-responsive" src="{{image.thumb(1200,'auto')}}" alt="product-img">
+											<img class="img-responsive product-image" src="{{image.thumb(1200,'auto')}}" alt="product-img">
 											<div class="preview-meta">
 												<ul>
 													<li>
-														<span data-toggle="modal" data-target="#product-modal">
+														<span class="view-image-trigger" data-toggle="modal" data-target="#product-modal">
 															<i class="tf-ion-ios-search-strong"></i>
 														</span>
 													</li>
 													<li>
-								                        <a href="#"><i class="tf-ion-ios-heart"></i></a>
+								                        <a href="#" class="follow-profile-trigger"><i class="tf-ion-ios-plus-empty"></i></a>
 													</li>
 													<li>
-														<a href=""><i class="tf-ion-android-cart"></i></a>
+								                        <a href="#" class="add-to-likes-trigger"><i class="tf-ion-ios-heart"></i></a>
 													</li>
 												</ul>
 							              	</div>
 										</div>
 										<div class="product-content">
-											<h4><a href="product-single.html">{{model.name}}</a></h4>
-											<p class="price">$200</p>
+											<h4><a href="product-single.html">{{image.title}}</a></h4>
+											<p class="price">{{image.description}}</p>
 										</div>
 									</div>
 								</div>
-                            {% endfor %}
+						    {% if loop.index == 3 %}
+						        {% set break = true %}
+						    {% endif %}
+						{% endfor %}
 
+
+
+
+                    		<!-- {% set break = false %}
+		                    {% for image in model.gallery %}
+			                    
+								{% if loop.index == 3 %}
+									<p>aye this is over 3</p>
+							        {% set break = true %}
+							    {% endif %}
+                            {% endfor %}
+ -->
                         {% set inc = inc+1 %}
                     {% endif %}
                     {% endfor %}
@@ -91,8 +108,9 @@ notFoundMessage = "Record not found"
 			        				<p class="product-short-description">
 			        					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil cum. Illo laborum numquam rem aut officia dicta cumque.
 			        				</p>
-			        				<a href="cart.html" class="btn btn-main">Add To Cart</a>
-			        				<a href="product-single.html" class="btn btn-transparent">View Product Details</a>
+			        				<a href="cart.html" class="btn btn-main follow-profile-trigger"><i class="fa fa-plus"></i> Follow</a>
+			        				<br>
+			        				<a href="product-single.html" class="view-profile-trigger btn btn-transparent">View Profile</a>
 			        			</div>
 			        		</div>
 			        	</div>

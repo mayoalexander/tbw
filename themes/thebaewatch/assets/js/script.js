@@ -17,13 +17,13 @@
 	});
 
 // Instagram Feed
-	var userFeed = new Instafeed({
-	    get: 'user',
-	    userId: '5348370406',
-	    resolution:'low_resolution',
-	    accessToken: '5348370406.1677ed0.b32bb03d761042229483dd3006cfa42e'
-	});
-	userFeed.run();
+	// var userFeed = new Instafeed({
+	//     get: 'user',
+	//     userId: '5348370406',
+	//     resolution:'low_resolution',
+	//     accessToken: '5348370406.1677ed0.b32bb03d761042229483dd3006cfa42e'
+	// });
+	// userFeed.run();
 	
 
 // Count Down JS
@@ -234,7 +234,49 @@ $('#simple-timer').syotimer({
 
 
 
+function previewImageModal(elem, e) {
+  e.preventDefault();
 
+  // update image 
+  var image = elem.closest('.product-item').find('.product-image').attr('src');
+  var modalImage = $('.product-modal').find('img');
+  modalImage.attr('src',image)
+
+  // Update Copy & Descriptions
+
+
+  // Update CTA Button + Text
+}
+
+
+
+
+
+/***************** Custom ******************/
+$(function(){
+
+
+  $('.view-image-trigger').click(function(e){
+    previewImageModal($(this),e);
+  });
+
+
+
+  $('.follow-profile-trigger').click(function(e){
+    e.preventDefault();
+    alert('Following users is not ready, at this moment in time. Contact Alex Mayo to finish this shit, asap!!!');
+  });
+
+
+  $('.add-to-likes-trigger').click(function(e){
+    e.preventDefault();
+    alert('Adding photos to likes is not ready, at this moment in time. Contact Alex Mayo to finish this shit, asap!!!');
+  });
+
+
+
+
+});
 
 
 
