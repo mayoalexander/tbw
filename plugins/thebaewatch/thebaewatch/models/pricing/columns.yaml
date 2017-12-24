@@ -1,0 +1,31 @@
+columns:
+    id:
+        label: id
+        type: number
+    title:
+        label: title
+        type: text
+    subtitle:
+        label: subtitle
+        type: text
+    description:
+        label: description
+        type: text
+    price:
+        label: price
+        type: text
+    public:
+        label: public
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+        invisible: true
+    updated_at:
+        label: updated_at
+        type: datetime
+        invisible: true
+    deleted_at:
+        label: deleted_at
+        type: datetime
+        invisible: true

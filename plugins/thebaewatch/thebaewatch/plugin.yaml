@@ -34,3 +34,12 @@ navigation:
                 label: Roles
                 url: thebaewatch/thebaewatch/roles
                 icon: icon-hand-o-right
+    main-menu-item2:
+        label: Admin
+        url: thebaewatch/thebaewatch/pricing
+        icon: icon-life-ring
+        sideMenu:
+            side-menu-item:
+                label: Pricing
+                url: thebaewatch/thebaewatch/pricing
+                icon: icon-usd

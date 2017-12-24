@@ -6,28 +6,79 @@
 
 
 
-<style type="text/css">
-.owl-carousel .owl-item img {
-    display: block;
-    width: auto;
-    max-height: 66vh;
-    margin: auto;
-}
 
-.portfolio-heading {
-    padding-top:8em;
-}
-.portfolio .box .cover {
-    background-color: rgba(0,0,0,0.0);
-}
-.portfolio .masonry {
-    background-color: #fff;
-}
-</style>
+<div class="container">
+        <div class="row">
+
+            {% set inc = 1 %}
+            {% for photo in modelData.gallery %}
+                <div class="col-md-6">
+                    <div class="post">
+                  <div class="post-thumb">
+                    <a href="">
+                      <img class="img-responsive" src="{{photo.thumb(600,'auto')}}" alt="">
+                    </a>
+                  </div>
+                  <h2 class="post-title"><a href="">Two Ways To Wear Straight Shoes</a></h2>
+                  <div class="post-meta">
+                    <ul>
+                      <li>
+                        <i class="tf-ion-ios-calendar"></i> 20, MAR 2017
+                      </li>
+                      <li>
+                        <i class="tf-ion-android-person"></i> POSTED BY ADMIN
+                      </li>
+                      <li>
+                        <a href=""><i class="tf-ion-ios-pricetags"></i> LIFESTYLE</a>,<a href=""> TRAVEL</a>, <a href="">FASHION</a>
+                      </li>
+                      <li>
+                        <a href=""><i class="tf-ion-chatbubbles"></i> 4 COMMENTS</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="post-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vitae placeat ad architecto nostrum
+                      asperiores vel aperiam, veniam eum nulla. Maxime cum magnam, adipisci architecto quibusdam cumque veniam
+                      fugiat quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio vitae ab doloremque accusamus
+                      sit, eos dolorum officiis a perspiciatis aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit. Quod, facere</p>
+                    <a href="" class="btn btn-main">Continue Reading</a>
+                      </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+            </div>
+
+    </div>
+        <div class="text-center">
+            <ul class="pagination post-pagination">
+                <li><a href="#">Prev</a>
+                </li>
+                <li class="active"><a href="#">1</a>
+                </li>
+                <li><a href="#">2</a>
+                </li>
+                <li><a href="#">3</a>
+                </li>
+                <li><a href="#">4</a>
+                </li>
+                <li><a href="#">5</a>
+                </li>
+                <li><a href="#">Next</a>
+                </li>
+            </ul>
+        </div>
+  </div>
+
+
+
+
 
 
             <!-- Section 6 -->
-            <section id="section-6" class="portfolio no-padding-bottom" style="padding-top:0px;">
+            <section id="section-6" class="portfolio no-padding-bottom" style="padding-top:0px;display:none;">
                 <div class="container-fluid">
                     <div class="row">
 
@@ -108,40 +159,7 @@
                                             </div>
                                             <a class="inline-popup-close" href="#"><i class="fa fa-times"></i></a>
                                         </div>
-                                        <!-- End inline popup content -->
-
-
                         </div>
-                        <!-- End masonry -->
-                        
-                    </div> <!-- /.row -->
-                </div> <!-- /.container -->
+                    </div> 
+                </div> 
             </section>
-
-
-
-                                                        <!-- Begin content carousel (http://www.owlcarousel.owlgraphic.com)
-                                                        ============================ 
-                                                        * Available carousel data attributes:
-                                                            data-items="1".......................(items visible on desktop)
-                                                            data-items-mobile-portrait="1".......(items visible on mobiles)
-                                                            data-items-mobile-landscape="1"......(items visible on mobiles)
-                                                            data-items-tablet="1"................(items visible on tablets)
-                                                            data-loop="true".....................(true/false)
-                                                            data-margin="10".....................(space between items)
-                                                            data-center="false"..................(true/false)
-                                                            data-start-position="0"..............(item start position)
-                                                            data-animate-in="fadeIn".............(more animations: http://daneden.github.io/animate.css/)
-                                                            data-animate-out="fadeOut"...........(more animations: http://daneden.github.io/animate.css/)
-                                                            data-mouse-drag="true"...............(true/false)
-                                                            data-autoheight="false"..............(true/false)
-                                                            data-autoplay="true".................(true/false)
-                                                            data-autoplay-timeout="5000".........(milliseconds)
-                                                            data-autoplay-hover-pause="true".....(true/false)
-                                                            data-autoplay-speed="800"............(milliseconds)
-                                                            data-nav="true"......................(true/false)
-                                                            data-nav-speed="800".................(milliseconds)
-                                                            data-dots="true".....................(true/false)
-                                                            data-dots-speed="800"................(milliseconds)
-                                                        -->
-

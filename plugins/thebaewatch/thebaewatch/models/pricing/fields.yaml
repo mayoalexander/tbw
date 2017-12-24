@@ -1,0 +1,24 @@
+fields:
+    title:
+        label: Title
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    subtitle:
+        label: Subtitle
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    description:
+        label: Description
+        size: huge
+        oc.commentPosition: ''
+        span: auto
+        type: textarea
+    features:
+        label: Features
+        oc.commentPosition: ''
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation

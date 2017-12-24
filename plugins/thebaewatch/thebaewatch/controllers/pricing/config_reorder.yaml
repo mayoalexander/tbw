@@ -1,0 +1,4 @@
+title: Pricing
+modelClass: Thebaewatch\Thebaewatch\Models\Pricing
+toolbar:
+    buttons: reorder_toolbar

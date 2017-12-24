@@ -1,85 +1,62 @@
-==
-{% set model = modelDetails.record %}
-{% set displayColumn = modelDetails.displayColumn %}
+== 
+{% set model = modelDetails.record %} 
+{% set displayColumn = modelDetails.displayColumn %} 
 {% set notFoundMessage = modelDetails.notFoundMessage %}
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{this.page.title}} | THEBAEWATCH</title>
-        <meta name="description" content="{{this.page.description}}">
-        <meta name="keywords" content="{{this.page.description}}" />
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-        <meta name="description" content='FREELABEL // TV | RADIO | MAG '/>
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:player' content='' />
-        <meta name='twitter:player:width' content='300' />
-        <meta name='twitter:player:height' content='300' />
-        <meta name='twitter:image' content='http://thebae.watch{{model.gallery[0].thumb(800,"auto")}}' />
-        <meta name='twitter:site' content='http://freelabel.net/view/tv/' />
-        <meta name='twitter:creator' content='@freelabelnet' />
-        <meta name='twitter:title' content='@{{model.instagram}} | Models' />
-        <meta name='twitter:text:description' content='Meet @{{model.instagram}}' />
-        <meta property='og:url' content='http://thebae.watch/model/{{model.instagram}}'>
-        <meta property='og:title' content=''>
-        <meta property='og:description' content='Meet @{{model.instagram}}'>
-        <meta property='og:image' content='http://thebae.watch{{model.gallery[0].thumb(800,"auto")}}'>
-        <meta property='og:image:type' content='image/png'>
-        <meta property='og:image:width' content='1024'>
-        <meta property='og:image:height' content='1024'>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="{{this.theme.Mission}}">
+    <meta name="author" content="{{this.theme.title}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{this.page.title}} | THEBAEWATCH</title>
+    <meta name="description" content="{{this.page.description}}">
+    <meta name="keywords" content="{{this.page.description}}" />
+    <meta name="description" content='FREELABEL // TV | RADIO | MAG ' />
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:player' content='' />
+    <meta name='twitter:player:width' content='300' />
+    <meta name='twitter:player:height' content='300' />
+    <meta name='twitter:image' content='http://thebae.watch{{model.gallery[0].thumb(800,"auto")}}' />
+    <meta name='twitter:site' content='http://freelabel.net/view/tv/' />
+    <meta name='twitter:creator' content='@freelabelnet' />
+    <meta name='twitter:title' content='@{{model.instagram}} | Models' />
+    <meta name='twitter:text:description' content='Meet @{{model.instagram}}' />
+    <meta property='og:url' content='http://thebae.watch/model/{{model.instagram}}'>
+    <meta property='og:title' content=''>
+    <meta property='og:description' content='Meet @{{model.instagram}}'>
+    <meta property='og:image' content='http://thebae.watch{{model.gallery[0].thumb(800,"auto")}}'>
+    <meta property='og:image:type' content='image/png'>
+    <meta property='og:image:width' content='1024'>
+    <meta property='og:image:height' content='1024'>
+    <title>{{this.theme.title}}</title>
+    <!-- Mobile Specific Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="http://demo.themefisher.com/themefisher/aviato/images/favicon.png" />
+    <!-- Themefisher Icon font -->
+    <link rel="stylesheet" href="http://demo.themefisher.com/themefisher/aviato/plugins/themefisher-font/style.css">
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="http://demo.themefisher.com/themefisher/aviato/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" type="text/css" href="http://demo.themefisher.com/themefisher/aviato/plugins/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="http://demo.themefisher.com/themefisher/aviato/plugins/revolution-slider/revolution/fonts/font-awesome/css/font-awesome.css">
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="http://demo.themefisher.com/themefisher/aviato/plugins/revolution-slider/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="http://demo.themefisher.com/themefisher/aviato/plugins/revolution-slider/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="http://demo.themefisher.com/themefisher/aviato/plugins/revolution-slider/revolution/css/navigation.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="http://demo.themefisher.com/themefisher/aviato/css/style.css">
+</head>
 
-        {% partial "template/resources" %}
-        
-    </head>
-
-    <body>
-
-        <!-- Page preloader (display loading animation while page loads) -->
-        <!-- <div id="preloader"><div class="pulse"></div></div> -->
-
-        <!-- /////////////////////////////
-        ////////// Begin header //////////
-        ////////////////////////////// -->
-
-        <header class="is-fixed">
-            <a id="cd-logo" class="baewatch-logo" href="/">
-                THEBAE.WATCH
-            </a>
-            <nav id="cd-top-nav">
-                <!-- <ul> 
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#0">Register</a></li>
-                    <li><a href="#0">Login</a></li>
-                </ul> -->
-            </nav>
-            <!-- Menu trigger (menu button) -->
-            <a id="cd-menu-trigger" href="#0"><span class="cd-menu-icon"></span></a>
-        </header>
-
-        <!-- /////////////////////////////
-        ////////// End header //////////
-        ////////////////////////////// -->
-
-
-        
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////
-        ////////// Begin menu  (more info: http://codyhouse.co/gem/secondary-expandable-navigation/) //////////
-        /////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-        {% partial 'template/navigation' %}
-
-        <!-- /////////////////////////
-        ////////// End menu //////////
-        ////////////////////////// -->
-
-
-        <!-- ///////////////////////////////////
-        ////////// Begin body content //////////
-        //////////////////////////////////// -->
-
-        <div id="body-content">
-
-
-
+<body id="body">
+    {% partial "template/navigation" %}

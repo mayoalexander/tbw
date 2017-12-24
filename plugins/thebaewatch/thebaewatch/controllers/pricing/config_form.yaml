@@ -1,0 +1,10 @@
+name: Pricing
+form: $/thebaewatch/thebaewatch/models/pricing/fields.yaml
+modelClass: Thebaewatch\Thebaewatch\Models\Pricing
+defaultRedirect: thebaewatch/thebaewatch/pricing
+create:
+    redirect: 'thebaewatch/thebaewatch/pricing/update/:id'
+    redirectClose: thebaewatch/thebaewatch/pricing
+update:
+    redirect: thebaewatch/thebaewatch/pricing
+    redirectClose: thebaewatch/thebaewatch/pricing

@@ -15,6 +15,27 @@ notFoundMessage = "Record not found"
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
 
+
+<script type="text/javascript">
+    
+    $(function(){
+        $('.watch-video-trigger').click(function(e){
+            e.preventDefault();
+            var mediaID = $(this).attr('data-media-id');
+            var embedUrl = 'https://www.youtube.com/embed/' + mediaID + '?modestbranding=1&showinfo=0&playsinline=1&autoplay=1';
+
+
+            $('.feature-player').attr('src',embedUrl);
+            // window.location.assign(embedUrl);
+        });
+    });
+
+</script>
+
+
+
+
+
 <!-- Section 5 -->
 <section id="section-5" class="video-demonstration split-box no-padding">
     <div class="container-fluid">
@@ -24,19 +45,11 @@ notFoundMessage = "Record not found"
             
                 <div class="row-same-height"> 
 
-                    <div class="col-left col-lg-6 col-lg-height no-padding">
+                    <div class="col-left col-lg-8 col-lg-height no-padding">
                         <div class="col-inner no-padding">
-                            {% set vidInc = 0 %}
-                            {% for episode in record.episodes %}
-                                {% if vidInc==0 %}
                                 <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe data-src="https://www.youtube.com/embed/{{episode.media_id |replace({'https://youtu.be/': ''}) }}?modestbranding=1&showinfo=0&playsinline=1&autoplay=1" width="500" height="281" allowfullscreen></iframe>
+                                    <iframe class="feature-player" src="https://www.youtube.com/embed/{{record.episodes[0].media_id |replace({'https://youtu.be/': ''}) }}?modestbranding=1&showinfo=0&playsinline=1&autoplay=1" width="500" height="281" allowfullscreen></iframe>
                                 </div>
-                                {% else %}
-                                    <!-- DO NOTHING -->
-                                {%endif %}
-                                {% set vidInc = vidInc+1 %}
-                            {% endfor %}
                                 
                             
                             <!-- End embed video -->
@@ -44,7 +57,7 @@ notFoundMessage = "Record not found"
                         </div> <!-- /.col-inner -->
                     </div> <!-- /.col -->
 
-                    <div class="col-right col-lg-6 col-lg-height col-middle no-padding bg-light-gray">
+                    <div class="col-right col-lg-4 col-lg-height col-middle no-padding bg-light-gray">
                         <div class="col-inner">
 
                             <!-- Begin Heading -->
@@ -84,9 +97,9 @@ notFoundMessage = "Record not found"
                 <h3 class="page-header">Episodes</h3>
             </div>
             {% for episode in record.episodes %}
-                <div class="col-sm-3 col-xs-6 episode-item" data-media-id="{{episode.media_id |replace({'https://youtu.be/': ''}) }}">
+                <div class="col-sm-3 col-xs-6 episode-item">
                 
-                    <a href="#">
+                    <a href="#" class="watch-video-trigger" data-media-id="{{episode.media_id |replace({'https://youtu.be/': ''}) }}">
                         <img class="img-responsive portfolio-item" src="https://i.ytimg.com/vi/{{episode.media_id |replace({'https://youtu.be/': ''}) }}/hqdefault.jpg" alt="">
                     </a>
                     <h4>{{episode.title}}</h4>
@@ -101,19 +114,5 @@ notFoundMessage = "Record not found"
 
 
 
-
-<!-- Modal -->
-<div class="modal fade" id="episodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index: 10000;">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content" style="display: block;padding-top:0;">
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{episode.media_id |replace({'https://youtu.be/': ''}) }}?modestbranding=1&showinfo=0&playsinline=1&autoplay=1" ></iframe>
-        </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 

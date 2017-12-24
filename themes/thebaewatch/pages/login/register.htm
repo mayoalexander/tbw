@@ -2,5 +2,17 @@ title = "Register"
 url = "/register"
 layout = "baewatch-main"
 is_hidden = 0
+
+[builderList pricingList]
+modelClass = "Thebaewatch\Thebaewatch\Models\Pricing"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
 ==
+
+{% partial 'login/pricing' %}
+
 {% partial 'login/register' %}

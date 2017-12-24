@@ -71,16 +71,6 @@ notFoundMessage = "Record not found"
 
 
 
-
-                    		<!-- {% set break = false %}
-		                    {% for image in model.gallery %}
-			                    
-								{% if loop.index == 3 %}
-									<p>aye this is over 3</p>
-							        {% set break = true %}
-							    {% endif %}
-                            {% endfor %}
- -->
                         {% set inc = inc+1 %}
                     {% endif %}
                     {% endfor %}
@@ -110,7 +100,7 @@ notFoundMessage = "Record not found"
 			        				</p>
 			        				<a href="cart.html" class="btn btn-main follow-profile-trigger"><i class="fa fa-plus"></i> Follow</a>
 			        				<br>
-			        				<a href="product-single.html" class="view-profile-trigger btn btn-transparent">View Profile</a>
+			        				<a href="model/{{model.slug}}" class="view-profile-trigger btn btn-transparent">View Profile</a>
 			        			</div>
 			        		</div>
 			        	</div>

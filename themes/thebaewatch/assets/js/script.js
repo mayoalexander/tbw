@@ -274,6 +274,23 @@ $(function(){
   });
 
 
+  $('.select-package-trigger').click(function(e){
+    e.preventDefault();
+    var packageID = $(this).attr('data-package-id');
+    console.log(packageID);
+
+
+
+  $.when($('.pricing-table').fadeOut())
+                                 .done(function() {
+      $('.signin-page.account').fadeIn();
+  });
+
+
+  });
+
+
+
 
 
 });

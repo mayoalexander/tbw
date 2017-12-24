@@ -60,3 +60,9 @@
 1.0.21:
     - 'Updated table thebaewatch_thebaewatch_models_roles'
     - builder_table_update_thebaewatch_thebaewatch_models_roles.php
+1.0.22:
+    - 'Created table thebaewatch_thebaewatch_pricing'
+    - builder_table_create_thebaewatch_thebaewatch_pricing.php
+1.0.23:
+    - 'Updated table thebaewatch_thebaewatch_pricing'
+    - builder_table_update_thebaewatch_thebaewatch_pricing.php
