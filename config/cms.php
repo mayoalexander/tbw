@@ -36,7 +36,7 @@ return [
     |
     */
 
-    'backendUri' => '/backend',
+    'backendUri' => 'backend',
 
     /*
     |--------------------------------------------------------------------------
@@ -50,6 +50,24 @@ return [
     */
 
     'backendForceSecure' => null,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Back-end login remember
+    |--------------------------------------------------------------------------
+    |
+    | Define live duration of backend sessions :
+    |
+    | true  - session never expire (cookie expiration in 5 years)
+    |
+    | false - session have a limited time (see session.lifetime)
+    |
+    | null  - The form login display a checkbox that allow user to choose
+    |         wanted behavior
+    |
+    */
+
+    'backendForceRemember' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -186,12 +204,12 @@ return [
     |
     | If deep hashing is enabled, the combiner cache will be reset when a change
     | is detected on imported files, in addition to those referenced directly.
-    | This will cause slower page performance. If set to null, assets are
-    | minified, when debug mode (app.debug) is disabled.
+    | This will cause slower page performance. If set to null, deep hashing
+    | is used when debug mode (app.debug) is enabled.
     |
     */
 
-    'enableAssetDeepHashing' => false,
+    'enableAssetDeepHashing' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -289,7 +307,7 @@ return [
     |
     */
 
-    'defaultMask' => ['file' => '777', 'folder' => '777'],
+    'defaultMask' => ['file' => null, 'folder' => null],
 
     /*
     |--------------------------------------------------------------------------
@@ -314,6 +332,19 @@ return [
     |
     */
 
-    'enableCsrfProtection' => false,
+    'enableCsrfProtection' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Force bytecode invalidation
+    |--------------------------------------------------------------------------
+    |
+    | When using OPcache with opcache.validate_timestamps set to 0 or APC
+    | with apc.stat set to 0 and Twig cache enabled, clearing the template
+    | cache won't update the cache, set to true to get around this.
+    |
+    */
+
+    'forceBytecodeInvalidation' => true,
 
 ];

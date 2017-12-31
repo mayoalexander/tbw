@@ -1,28 +1,52 @@
+<script type="text/javascript">
+    
+    $(function(){
+        $('.signup-form').submit(function(e){
+            e.preventDefault();
+
+            var data = $(this).serialize();
+            // var signupUrl = $(this).attr('action');
+            var signupUrl = '/public/register.php';
+            $.post(signupUrl, data, function(result){
+              $('.signin-page .feedback').html(result);
+            });
+
+
+
+        });
+    });
+
+</script>
+
+
 <section class="signin-page account" style="display:none;">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="block text-center">
-          <a class="logo" href="index.html">
+<!--           <a class="logo" href="index.html">
             <img src="images/logo.png" alt="">
-          </a>
+          </a> -->
           <h2 class="text-center">Create Your Account</h2>
-          <form class="text-left clearfix" action="index.html">
+          <p class="feedback"></p>
+          <form class="text-left clearfix signup-form" action="/public/login.php" method="POST">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="First Name">
+              <input name="firstname" type="text" class="form-control" placeholder="First Name">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Last Name">
+              <input name="lastname" type="text" class="form-control" placeholder="Last Name">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Username">
+              <input name="username" type="text" class="form-control" placeholder="Username">
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" placeholder="Email">
+              <input name="email" type="email" class="form-control" placeholder="Email">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" placeholder="Password">
+              <input name="password" type="password" class="form-control" placeholder="Password">
             </div>
+            <input type="hidden" name="account-type" class="account-type">
+            <input type="hidden" name="action" value="login">
             <div class="text-center">
               <button type="submit" class="btn btn-main text-center">Sign In</button>
             </div>

@@ -20,6 +20,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Name
+    |--------------------------------------------------------------------------
+    |
+    | This value is the name of your application. This value is used when the
+    | framework needs to place the application's name in a notification or
+    | any other location as required by the application or its packages.
+    */
+
+    'name' => 'October CMS',
+
+    /*
+    |--------------------------------------------------------------------------
     | Application URL
     |--------------------------------------------------------------------------
     |
@@ -29,7 +41,7 @@ return [
     |
     */
 
-    'url' => 'http://thebae.watch/',
+    'url' => 'http://localhost',
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +93,7 @@ return [
     |
     */
 
-    'key' => 'Ka2dlN6pWvVLLXonKHUTre4YuRhIUTnE',
+    'key' => 'CHANGE_ME!!!!!!!!!!!!!!!!!!!!!!!',
 
     'cipher' => 'AES-256-CBC',
 

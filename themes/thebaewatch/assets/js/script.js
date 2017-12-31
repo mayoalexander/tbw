@@ -276,7 +276,10 @@ $(function(){
 
   $('.select-package-trigger').click(function(e){
     e.preventDefault();
+
     var packageID = $(this).attr('data-package-id');
+
+    $('input.account-type').attr('value',packageID)
     console.log(packageID);
 
 

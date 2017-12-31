@@ -1,0 +1,6 @@
+{
+    "name": "yungcodorwithmayoontop/waitnohomo",
+    "require": {
+        "paypal/rest-api-sdk-php": "*"
+    }
+}
