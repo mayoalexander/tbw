@@ -1,10 +1,10 @@
 <script type="text/javascript">
-    
     $(function(){
         $('.signup-form').submit(function(e){
             e.preventDefault();
 
             var data = $(this).serialize();
+            var form = $(this).html(loadingSpinner());
             // var signupUrl = $(this).attr('action');
             var signupUrl = '/public/register.php';
             $.post(signupUrl, data, function(result){

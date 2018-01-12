@@ -250,6 +250,11 @@ function previewImageModal(elem, e) {
 
 
 
+function loadingSpinner() {
+  return 'Please wait..';
+}
+
+
 
 
 /***************** Custom ******************/

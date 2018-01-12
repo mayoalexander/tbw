@@ -1,6 +1,6 @@
 <?php
 
-namespace Model\Core;
+namespace Core;
 
 class Conn extends \Core\Object_Abstract
 {

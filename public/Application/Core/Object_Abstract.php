@@ -44,9 +44,8 @@ class Object_Abstract
      */
     public function addData(array $data)
     {
-        foreach ($data as $key => $d) {
+        foreach ($data as $key => $d)
             $this->setData($key, $d);
-        }
 
         return $this;
     }

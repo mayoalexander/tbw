@@ -21,6 +21,46 @@ final class Application {
         $modelName  = empty($modelName) ? 'Model_Abstract' : $modelName;
         $model      = '\Model\\' . $modelName;
 
-        return new $model;
+       return new $model;
     }
+
+    public function getConn()
+    {
+        if (!self::registry('core_conn'))
+            self::register('core_conn', new \Core\Conn());
+
+        return self::registry('core_conn');
+    }
+
+    public function register($key, $val)
+    {
+        self::$_registry[$key] = $val;
+    }
+
+    public function registry($key)
+    {
+        return self::$_registry[$key] ?? false;
+    }
+
+    public function getCoreObject($coreObjectName)
+    {
+        $coreObject = '\Core\\' . $coreObjectName;
+
+        return new $coreObject;
+    }
+
+    public static function debug($data, $exit=false) {
+
+        echo '<pre>';
+            var_dump($data);
+        echo '</pre>';
+
+        if ($exit==1) {
+            exit();
+        }
+
+    }
+
+
+
 }
