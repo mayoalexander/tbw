@@ -7,12 +7,19 @@ require_once(__DIR__ . DS . 'Application' . DS . 'Autoload.php');
 
 // Get the connection into the database
 $request        = \Application::getSingleton('Core\Request');
-$signup        = \Application::getSingleton('Core\Signup');
+$user           = \Application::getModel('Baewatch\User');
+
 $accountType    = $request->getData('account-type');
 $pricing        = \Application::getModel('Baewatch\Pricing')->load($accountType);
 $price          = $pricing->getData('price');
 
 
+\Application::debug(
+    [
+        'yuh' => $user->createNewUser()
+        // 'user' => $user
+    ]
+);
 
 
 
@@ -22,6 +29,7 @@ $price          = $pricing->getData('price');
 
 
 
+exit;
 
 // Redirect to order review page
 echo '
